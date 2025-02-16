@@ -41,15 +41,31 @@
             <h2>Login</h2>
             <form>
                 <label for="email">Email</label>
-                <input type="email" placeholder="abcdefgh@gmail.com">
+                <input type="email" placeholder="Type your email" id="email">
                 <label for="password">Password</label>
-                <input type="password" placeholder="Abcd@12345">
+                <input type="password" placeholder="Type your password" id="password">
                 <p class="forgot">forgot password?</p>
-                <a href="#" class="btn">Login</a>
+               <button class="btn" onclick="func()">Login</button>
                 <p class="signup">Don't have an account? <span>Register for Free</span></p>
             </form>
         </div>
     </div>
+    <script>
+
+        function func(){
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("password").value;
+            if (email == 'abcd@gmail.com' && pass == '12345'){
+                alert('You are logged in! Enjoy your food!')
+                window.location.assign("menu.html")
+            }
+            else{
+                alert('Invaild entry')
+            }
+
+        }
+       
+    </script>
 
 </body>
 
